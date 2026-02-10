@@ -34,12 +34,12 @@ jobs:
         run: npm run build:gh
 
       - name: Add .nojekyll file
-        run: touch dist/biobit-ai/.nojekyll
+        run: touch dist/biobit-ai/browser/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/biobit-ai
+          path: dist/biobit-ai/browser
 
   deploy:
     environment:
