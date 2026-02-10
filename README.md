@@ -296,6 +296,34 @@ ng test
 ng e2e
 ```
 
+## 🚀 Deployment na GitHub Pages
+
+### Automatyczny Deployment
+
+Projekt jest skonfigurowany do automatycznego deploymentu na GitHub Pages przy każdym push do głównej gałęzi.
+
+**Konfiguracja w repozytorium GitHub:**
+
+1. Przejdź do **Settings** → **Pages**
+2. W sekcji **Source** wybierz **GitHub Actions**
+3. Przy następnym push, aplikacja zostanie automatycznie zbudowana i wdrożona
+
+### Ręczny Deployment
+
+```bash
+# Zbuduj projekt dla GitHub Pages
+npm run build:gh
+
+# Wynik będzie w katalogu dist/biobit-ai/
+```
+
+**Uwaga:** Aplikacja wymaga WebGPU, więc działa tylko w:
+- Chrome 113+
+- Edge 113+
+- Inne przeglądarki z WebGPU
+
+Pierwsza wizyta wymaga pobrania modelu AI (~580 MB).
+
 ## 📝 Licencja
 
 Projekt stworzony w celach edukacyjnych i demonstracyjnych.
